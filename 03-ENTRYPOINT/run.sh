@@ -1,1 +1,1 @@
-echo "Hello World" > /tmp/hello.txt
+echo "Hello World"
