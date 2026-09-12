@@ -10,4 +10,5 @@ ENTRYPOINT ["java", "-jar", "/app/target/shipping-1.0.jar"]
 
 FROM redhat/ubi9:latest
 RUN dnf install -y java-17-openjdk-headless
+copy --from=builder /app/target/shipping-1.0.jar /shipping-1.0.jar
 ENTRYPOINT ["java", "-jar", "/shipping-1.0.jar"]
