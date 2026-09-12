@@ -4,3 +4,4 @@ RUN dnf install -y --setopt=install_weak_deps=False maven git && \
     rm -rf /var/cache/dnf
 RUN git clone https://github.com/roboshop-devops-project-v3/shipping.git /app
 WORKDIR /app
+RUN mvn clean package
